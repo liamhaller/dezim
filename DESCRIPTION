@@ -1,0 +1,24 @@
+Package: dezim
+Title: ggplot2 Formatting for DeZIM 
+Version: 0.0.0.9000
+Authors@R: 
+    person("Liam", "Haller", , "haller@dezim-institut.de", role = c("aut", "cre", "cph"),
+           comment = c(ORCID = "0000-0001-8033-6599"))
+Description: Add "+ dezim_style()" for DeZIM style guide formatting with ggplot2 graphs. Use dezim_colors for 
+    functions that require fill/color (e.g., scale_fill_manual, scale_color_manual ).
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Depends: 
+    R (>= 2.10)
+Imports:
+    ggplot2,
+    sysfonts
+Remotes: liamhaller/surveyexplorer
+Suggests: 
+    dplyr,
+    testthat (>= 3.0.0),
+    surveyexplorer,
+LazyData: true
+Config/testthat/edition: 3
