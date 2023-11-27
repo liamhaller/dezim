@@ -18,7 +18,8 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of dezim is to ...
+The dezim packages applies the DeZIM style guide formatting and DeZIM colors to ggplot2 graphs.
+
 
 ## Installation
 
@@ -50,15 +51,26 @@ title = "Fuel economy declines as weight increases",
 # Default Graph
   p1
 
-#with DeZIM formatting
+
+
+
+
+```
+
+
+With DeZIM formatting
+```{r}
   p1 +
   dezim_style()
+```
 
-#use dezim_colors for functions that require color/fill
+
+Finally, use dezim_colors for functions that require color/fill
+```{r}
  p1 +
  dezim_style() +
  scale_color_manual(values = dezim_colors)
-
 ```
+
 
 

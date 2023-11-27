@@ -6,7 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of dezim is to …
+The dezim packages applies the DeZIM style guide formatting and DeZIM
+colors to ggplot2 graphs.
 
 ## Installation
 
@@ -43,21 +44,21 @@ title = "Fuel economy declines as weight increases",
 
 <img src="man/figures/README-example-1.png" width="100%" />
 
-``` r
+With DeZIM formatting
 
-#with DeZIM formatting
+``` r
   p1 +
   dezim_style()
 ```
 
-<img src="man/figures/README-example-2.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+
+Finally, use dezim_colors for functions that require color/fill
 
 ``` r
-
-#use dezim_colors for functions that require color/fill
  p1 +
  dezim_style() +
  scale_color_manual(values = dezim_colors)
 ```
 
-<img src="man/figures/README-example-3.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
