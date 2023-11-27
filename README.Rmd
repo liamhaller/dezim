@@ -1,0 +1,64 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# dezim
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of dezim is to ...
+
+## Installation
+
+You can install the development version of dezim from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("liamhaller/dezim")
+```
+
+## Example
+
+Add `+ dezim_style() to ggplot2 graphs for DeZIM formatting
+```{r example}
+library(dezim)
+library(ggplot2)
+
+mtcars$gear <- as.factor(mtcars$gear)
+
+p1 <- ggplot(mtcars) +
+geom_point(aes(x = wt, y = mpg, colour = gear)) +
+labs(
+title = "Fuel economy declines as weight increases",
+  x = "Weight (1000 lbs)",
+  y = "Fuel economy (mpg)",
+  colour = "Gears"
+  )
+
+# Default Graph
+  p1
+
+#with DeZIM formatting
+  p1 +
+  dezim_style()
+
+#use dezim_colors for functions that require color/fill
+ p1 +
+ dezim_style() +
+ scale_color_manual(values = dezim_colors)
+
+```
+
+

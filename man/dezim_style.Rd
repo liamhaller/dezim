@@ -36,15 +36,33 @@ No return, a theme to add to ggplot2 graphs
 DeZIM Graphics Style
 }
 \examples{
-library(surveyexplorer)
+library(ggplot2)
+mtcars$gear <- as.factor(mtcars$gear)
 
-#add "+ dezim_style to ggplot2 graphs
-surveyexplorer::matrix_table(berlinbears, dplyr::starts_with('p_')) +
-dezim_style()
+p1 <- ggplot(mtcars) +
+geom_point(aes(x = wt, y = mpg, colour = gear)) +
+labs(
+title = "Fuel economy declines as weight increases",
+ subtitle = "(1973-74)",
+  x = "Weight (1000 lbs)",
+  y = "Fuel economy (mpg)",
+  colour = "Gears"
+  )
 
-#use dezim_colors for functions that take colors
- surveyexplorer::matrix_freq(berlinbears, dplyr::starts_with('p_')) +
- dezim_style() + ggplot2::scale_fill_manual(values = dezim::dezim_colors)
+#Default graph
+ p1
+
+ \dontrun{
+ #Examples are not run since test machine does not have Calibri installed
+#use `+ dezim_style()` to apply theme
+ p1 +
+ dezim_style()
+
+#use `dezim_colors` for fill/colors
+ p1 +
+ dezim_style() +
+ scale_color_manual(values = dezim_colors)
+}
 
 
 
