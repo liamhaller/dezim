@@ -109,8 +109,7 @@ dezim_style <- function(title_size = 10.5, sub_title_size = 9, x_axis_title_size
       legend.position = "bottom",
 
       ### Design ###
-      plot.background = element_rect(fill = green5p_rgb,
-                                     colour = "#154a39"),
+      plot.background = element_rect(fill = green5p_rgb),
       axis.ticks = element_blank(),
       panel.grid.major=element_line(color=grey_rgb, linewidth = .5/2.141959),
       panel.grid.minor=element_line(color = grey_rgb, linewidth = .5/2.141959))
