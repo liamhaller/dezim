@@ -16,10 +16,10 @@ knitr::opts_chunk$set(
 # dezim
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 The dezim packages applies the DeZIM style guide formatting and DeZIM colors to ggplot2 graphs.
-
 
 ## Installation
 
@@ -32,7 +32,8 @@ devtools::install_github("liamhaller/dezim")
 
 ## Example
 
-Add `+ dezim_style() to ggplot2 graphs for DeZIM formatting
+Add \`+ dezim_style() to ggplot2 graphs for DeZIM formatting
+
 ```{r example}
 library(dezim)
 library(ggplot2)
@@ -57,20 +58,17 @@ title = "Fuel economy declines as weight increases",
 
 ```
 
-
 With DeZIM formatting
+
 ```{r}
   p1 +
   dezim_style()
 ```
 
-
 Finally, use dezim_colors for functions that require color/fill
+
 ```{r}
  p1 +
  dezim_style() +
  scale_color_manual(values = dezim_colors)
 ```
-
-
-

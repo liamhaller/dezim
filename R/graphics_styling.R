@@ -53,6 +53,11 @@ dezim_style <- function(title_size = 10.5, sub_title_size = 9, x_axis_title_size
     #rlang::check_installed("sysfonts")
 
 
+  green_rgb <- rgb(30, 95, 70, maxColorValue = 255)
+  green5p_rgb <- rgb(242, 244, 239, maxColorValue = 255)
+  text_rgb <- rgb(75, 75, 75, maxColorValue = 255)
+  grey_rgb <-rgb(179, 179, 179, maxColorValue = 255)
+
     list_of_fonts <- as.data.frame(sysfonts::font_files())
     if(any(grepl("Calibri.ttf", list_of_fonts, ignore.case = TRUE))){
       Calibri <- list_of_fonts[list_of_fonts$file == "calibri.ttf",]
@@ -64,49 +69,51 @@ dezim_style <- function(title_size = 10.5, sub_title_size = 9, x_axis_title_size
       stop("The Calibri font is not installed on your machine, please install it and try again")
     }
 
+
+
     ggplot2::theme(
       ### Text ###
       #154a39
       #4d4d4d
       #Title
       plot.title = element_text(size = title_size,
-                                color = "#154a39",
+                                color = green_rgb,
                                 family = "Calibri"),
       plot.subtitle = element_text(size = sub_title_size,
-                                   color = "#154a39",
+                                   color = green_rgb,
                                    family = 'Calibri'),
-      plot.caption = element_text(color = "#154a39",
+      plot.caption = element_text(color = green_rgb,
                                   family = 'Calibri'),
 
       #Axis text
-      axis.title.x = element_text(size = x_axis_title_size, color = "#4d4d4d",
+      axis.title.x = element_text(size = x_axis_title_size, color = text_rgb,
                                   family = 'Calibri'),
-      axis.text.x = element_text(size = x_axis_text_size, color = "#4d4d4d",
+      axis.text.x = element_text(size = x_axis_text_size, color = text_rgb,
                                  family = 'Calibri'),
-      axis.title.y = element_text(size = y_axis_title_size, color = "#4d4d4d",
+      axis.title.y = element_text(size = y_axis_title_size, color = text_rgb,
                                   family = 'Calibri'),
-      axis.text.y = element_text(size = y_axis_text_size, color = "#4d4d4d",
+      axis.text.y = element_text(size = y_axis_text_size, color = text_rgb,
                                  family = 'Calibri'),
 
 
 
       ### Legend ###
-      legend.text= element_text(color = "#4d4d4d",
+      legend.text= element_text(color = text_rgb,
                                 size = legend_text_size,
                                 family = "Calibri"),
-      legend.title = element_text(color = "#4d4d4d",
+      legend.title = element_text(color = text_rgb,
                                   family = 'Calibri'),
-      legend.background = element_rect(fill = '#EAEDEC',
+      legend.background = element_rect(fill = green5p_rgb,
                                        color = NA),
-      legend.key = element_rect(fill = "#EAEDEC"),
+      legend.key = element_rect(fill = green5p_rgb),
       legend.position = "bottom",
 
       ### Design ###
-      plot.background = element_rect(fill = '#EAEDEC',
+      plot.background = element_rect(fill = green5p_rgb,
                                      colour = "#154a39"),
-      axis.ticks = element_line(color = "#4d4d4d"),
-      panel.grid.major=element_line(color="#D3D3D3", linewidth = .5/2.141959),
-      panel.grid.minor=element_line(color = "#D3D3D3", linewidth = .5/2.141959))
+      axis.ticks = element_blank(),
+      panel.grid.major=element_line(color=grey_rgb, linewidth = .5/2.141959),
+      panel.grid.minor=element_line(color = grey_rgb, linewidth = .5/2.141959))
 
 
 }
@@ -122,6 +129,10 @@ dezim_style <- function(title_size = 10.5, sub_title_size = 9, x_axis_title_size
 #'   ...
 #' }
 "dezim_colors"
+
+
+
+
 
 
 
