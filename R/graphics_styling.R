@@ -44,8 +44,8 @@
 #' @return No return, a theme to add to ggplot2 graphs
 #' @export
 #'
-dezim_style <- function(title_size = 10.5, sub_title_size = 9, x_axis_title_size = 10,
-                        y_axis_title_size = 10, x_axis_text_size = 9,
+dezim_style <- function(title_size = 9, sub_title_size = 9, x_axis_title_size = 9,
+                        y_axis_title_size = 9, x_axis_text_size = 9,
                         y_axis_text_size = 9, legend_text_size = 9){
 
 
