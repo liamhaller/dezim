@@ -53,6 +53,11 @@ dezim_style <- function(title_size = 9, sub_title_size = 9, x_axis_title_size = 
     #rlang::check_installed("sysfonts")
 
 
+  "#1E5F46"
+  "#F2F4EF"
+  "#4B4B4B"
+  "#B3B3B3"
+
   green_rgb <- rgb(30, 95, 70, maxColorValue = 255)
   green5p_rgb <- rgb(242, 244, 239, maxColorValue = 255)
   text_rgb <- rgb(75, 75, 75, maxColorValue = 255)
@@ -110,6 +115,7 @@ dezim_style <- function(title_size = 9, sub_title_size = 9, x_axis_title_size = 
 
       ### Design ###
       plot.background = element_rect(fill = green5p_rgb),
+      panel.background = element_rect(fill = green5p_rgb),
       axis.ticks = element_blank(),
       panel.grid.major=element_line(color=grey_rgb, linewidth = .5/2.141959),
       panel.grid.minor=element_line(color = grey_rgb, linewidth = .5/2.141959))
