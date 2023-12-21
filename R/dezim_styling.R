@@ -9,6 +9,7 @@
 #' @param legend_text_size Size of text in legend
 #' @import ggplot2
 #' @importFrom sysfonts font_files font_add
+#' @importFrom grDevices rgb
 #'
 #' @examples
 #' library(ggplot2)
