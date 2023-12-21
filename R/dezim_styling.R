@@ -66,7 +66,11 @@ dezim_style <- function(title_size = 9, sub_title_size = 9, x_axis_title_size = 
 
     list_of_fonts <- as.data.frame(sysfonts::font_files())
     if(any(grepl("Calibri.ttf", list_of_fonts, ignore.case = TRUE))){
-      Calibri <- list_of_fonts[list_of_fonts$file == "calibri.ttf",]
+
+      Calibri <- try(list_of_fonts[list_of_fonts$file == "calibri.ttf",])
+      if(NROW(Calibri) == 0){
+        Calibri <-list_of_fonts[list_of_fonts$file == "Calibri.ttf",]
+      }
       sysfonts::font_add(family = Calibri[,3],
                          regular = list.files(path = Calibri$path,
                                               pattern = Calibri[,2],
@@ -120,8 +124,6 @@ dezim_style <- function(title_size = 9, sub_title_size = 9, x_axis_title_size = 
       axis.ticks = element_blank(),
       panel.grid.major=element_line(color=grey_rgb, linewidth = .5/2.141959),
       panel.grid.minor=element_line(color = grey_rgb, linewidth = .5/2.141959))
-
-
 }
 
 
