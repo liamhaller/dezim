@@ -53,10 +53,10 @@ dezim_style <- function(title_size = 9, sub_title_size = 9, x_axis_title_size = 
     #rlang::check_installed("sysfonts")
 
 
-  "#1E5F46"
-  "#F2F4EF"
-  "#4B4B4B"
-  "#B3B3B3"
+  #"#1E5F46"
+  #"#F2F4EF"
+  #"#4B4B4B"
+  #"#B3B3B3"
 
   green_rgb <- rgb(30, 95, 70, maxColorValue = 255)
   green5p_rgb <- rgb(242, 244, 239, maxColorValue = 255)

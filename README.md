@@ -32,7 +32,6 @@ mtcars$gear <- as.factor(mtcars$gear)
 p1 <- ggplot(mtcars) +
 geom_point(aes(x = wt, y = mpg, colour = gear)) +
 labs(
-title = "",
   x = "Weight (1000 lbs)",
   y = "Fuel economy (mpg)",
   colour = "Gears"
@@ -62,3 +61,13 @@ Finally, use dezim_colors for functions that require color/fill
 ```
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+
+The package also include the function `theme_publish()` to format
+figures for scientific publications.
+
+``` r
+ p1 +
+ theme_publish() 
+```
+
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
