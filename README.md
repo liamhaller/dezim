@@ -32,7 +32,7 @@ mtcars$gear <- as.factor(mtcars$gear)
 p1 <- ggplot(mtcars) +
 geom_point(aes(x = wt, y = mpg, colour = gear)) +
 labs(
-title = "Fuel economy declines as weight increases",
+title = "",
   x = "Weight (1000 lbs)",
   y = "Fuel economy (mpg)",
   colour = "Gears"
