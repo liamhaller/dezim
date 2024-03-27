@@ -113,13 +113,13 @@ dezim_style <- function(title_size = 9, sub_title_size = 9, x_axis_title_size = 
                                 family = "Calibri"),
       legend.title = element_text(color = text_rgb,
                                   family = 'Calibri'),
-      legend.background = element_rect(fill = green5p_rgb,
+      legend.background = element_rect(fill = 'white',
                                        color = NA),
-      legend.key = element_rect(fill = green5p_rgb),
+      legend.key = element_rect(fill = 'white'),
       legend.position = "bottom",
 
       ### Design ###
-      plot.background = element_rect(fill = green5p_rgb),
+      plot.background = element_rect(fill = 'white'),
       panel.background = element_rect(fill = green5p_rgb),
       axis.ticks = element_blank(),
       panel.grid.major=element_line(color=grey_rgb, linewidth = .5/2.141959),
