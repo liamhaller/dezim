@@ -45,9 +45,9 @@
 #' @return No return, a theme to add to ggplot2 graphs
 #' @export
 #'
-dezim_style <- function(title_size = 9, sub_title_size = 9, x_axis_title_size = 9,
-                        y_axis_title_size = 9, x_axis_text_size = 9,
-                        y_axis_text_size = 9, legend_text_size = 9){
+dezim_style <- function(title_size = 12, sub_title_size = 12, x_axis_title_size = 12,
+                        y_axis_title_size = 12, x_axis_text_size = 12,
+                        y_axis_text_size = 12, legend_text_size = 12){
 
 
     #sysfonts required to check for Calibri and add if it exists
